@@ -89,7 +89,7 @@ app.use(function(err, req, res, next) {
 });
 
 //production
-var port = Number(process.env.PORT || 3000);
+var port = Number(process.env.PORT);
 
 //local
 //var port = 3000;
