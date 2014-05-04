@@ -1,0 +1,24 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', {
+    title: 'Express',
+    todos : todos
+  });
+});
+
+
+
+module.exports = router;
+
+module.exports.addTodo = function(todos) {
+  return function(req, res) {
+    todos.push(req.body);
+    res.json({ todos : todos });
+  }
+};
+
+
+
